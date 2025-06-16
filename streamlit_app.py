@@ -15,7 +15,7 @@ st.set_page_config(page_title="Customer Segmentation", layout="wide")
 
 @st.cache_data
 def load_data():
-    df = pd.read_excel("data/online_retail.xlsx")
+    df = pd.read_excel("data/Online Retail.xlsx")
     df_clean = df.dropna(subset=['CustomerID'])
     df_clean = df_clean[df_clean['Quantity'] >= 0]
     df_clean = df_clean.drop_duplicates()
